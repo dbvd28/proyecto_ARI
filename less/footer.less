@@ -1,3 +1,11 @@
+body {
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1 0 auto;// hace que ocupe el espacio restante
+}
+
 footer {
   background-color: @primary-text-color;
   color: @secondary-text-color;
@@ -7,14 +15,18 @@ footer {
   display: flex;
   flex-direction: column;
   margin: 0;
+  flex-shrink: 0;
+
   h2 {
     width: 100%;
   }
+
   .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 10px;
+
     a {
       display: inline-block;
       transition: transform 0.3s ease-in-out;
@@ -30,6 +42,7 @@ footer {
       filter: brightness(0) invert(1);
     }
   }
+
   @media (min-width: #breaks[tablet]) {
     flex-direction: row;
     padding: 20px;
@@ -41,15 +54,18 @@ footer {
       transform: translateY(6px);
     }
   }
+
   @media (min-width: #breaks[desktop]) {
     justify-content: start;
+
     h2 {
-      width:40%;
+      width: 40%;
       justify-content: start;
     }
-    p{
-        margin-left: 100px;
-        justify-content: end;
+
+    p {
+      margin-left: 100px;
+      justify-content: end;
     }
   }
 }
