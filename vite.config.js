@@ -6,18 +6,29 @@ import handlebars from 'vite-plugin-handlebars'
 import {ViteMinifyPlugin} from 'vite-plugin-minify'
 import { getPageContext } from './data/index'
 
-const obtenerEntradas = () => {
+const obtenerEntradas = ()=>{
     return Object.fromEntries(
-      globSync('./src/**/*.html', {
-        ignore: ['./dist/**', './node_modules/**']
-      }).map(fileData => [
-        fileData.slice(0, fileData.length - path.extname(fileData).length),
-        resolve(__dirname, fileData)
-      ])
+        [
+            ...glob.sync(
+                './**/*.html',
+                {
+                    ignore: [
+                        './dist/**',
+                        './node_modules/**'
+                    ]
+                }
+            ).map(
+                fileData => [
+                    fileData.slice(0, fileData.length - path.extname(fileData).length),
+                    resolve(__dirname, fileData)
+                ]
+            )
+        ]
     );
-  };
+}
 
-  export default defineConfig({
+
+export default defineConfig({
     appType: 'mpa',
     base: process.env.DEPLOY_BASE_URL,
     build: {
@@ -35,4 +46,3 @@ const obtenerEntradas = () => {
         ViteMinifyPlugin()
     ]
 });
-  
