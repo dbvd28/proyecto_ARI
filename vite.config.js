@@ -6,10 +6,20 @@ import handlebars from 'vite-plugin-handlebars'
 import {ViteMinifyPlugin} from 'vite-plugin-minify'
 import { getPageContext } from './data/index'
 
-
+const obtenerEntradas = () => {
+    return Object.fromEntries(
+      globSync('./src/**/*.html', {
+        ignore: ['./dist/**', './node_modules/**']
+      }).map(fileData => [
+        fileData.slice(0, fileData.length - path.extname(fileData).length),
+        resolve(__dirname, fileData)
+      ])
+    );
+  };
+  
 export default defineConfig({
     appType: 'mpa',
-    base: process.env.DEPLOY_BASE_URL,
+    base: process.env.DEPLOY_BASE_URL || '/',
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'partials'),
@@ -18,3 +28,4 @@ export default defineConfig({
         ViteMinifyPlugin()
     ]
 });
+
