@@ -43,6 +43,9 @@ jobs:
       - name: Compilar el Sitio
         run: npm run build
 
+      - name: Make 404 Fallback
+        run: cp ./dist/index.html ./dist/404.html
+
       - name: Configurar Entorno Github Pages
         uses: actions/configure-pages@v5
 
