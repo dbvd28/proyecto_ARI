@@ -12,13 +12,13 @@ const commonData = {
 export const getPageContext = (pagePath) => {
     let pageData = {};
     switch (pagePath) {
-        case  '/index.html':
+        case  './index.html':
             break;
-        case '/Eventos.html':
+        case './Eventos.html':
             break;
-        case '/faq.html':
+        case './faq.html':
             break;
-        case '/aboutus.html':
+        case './aboutus.html':
             break;
         default:
             break;
