@@ -46,3 +46,5 @@ jobs:
       - name: Publicar Página en Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Mostrar URL publicada
+        run: echo "Tu sitio está en vivo en:${{ steps.deployment.outputs.page_url }}"
