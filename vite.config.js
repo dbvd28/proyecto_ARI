@@ -16,16 +16,23 @@ const obtenerEntradas = () => {
       ])
     );
   };
-  
-export default defineConfig({
+
+  export default defineConfig({
     appType: 'mpa',
-    base: process.env.DEPLOY_BASE_URL || '/',
+    base: process.env.DEPLOY_BASE_URL,
+    build: {
+        rollupOptions: {
+            input: obtenerEntradas()
+        },
+        minify: true
+    },
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'partials'),
+            context : getPageContext
         }),
         htmlPurge({}),
         ViteMinifyPlugin()
     ]
 });
-
+  
