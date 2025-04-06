@@ -1,4 +1,5 @@
-const base = import.meta.env.BASE_URL || '';
+const base = process.env.DEPLOY_BASE_URL || '/';
+
 
 const commonData = {
   navigation: [
