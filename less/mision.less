@@ -1,0 +1,67 @@
+.mission {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    @media(min-width:#breaks[desktop]){
+       height:60vh;
+       width: 100vw;
+    }
+    .title-mission {
+        font-size: 28px;
+        color:@primary-text-color;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .p-mission{
+        .eng-mission{
+            margin-top:5px ;
+        }
+        @media(min-width:#breaks[desktop]){
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            .span-mission{
+                height: 100%;
+                line-height: 1.9;
+                font-size: 20px;
+            }
+            .eng-mission{
+                margin: 0;
+                height: 100%;
+                line-height: 1.9;
+                font-size: 20px;
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 700px;
+            margin: 0 auto;
+            &::before {
+                content: "✨ ";
+            }
+            
+            &::after {
+                content: " ✨";
+            }
+            @media(min-width:#breaks[desktop]){
+                justify-content: center;
+            }
+        }
+    }
+    
+    .highlight {
+        color: #e63946;
+        font-weight: bold;
+    }
+    
+}
+
+
+
+
+
+

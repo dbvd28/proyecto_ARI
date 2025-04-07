@@ -1,0 +1,46 @@
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:@secondary-text-color;
+    video {
+        position: absolute;
+           object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100vw;
+     height: 70vh;
+        z-index: -1;
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+       .showcase{
+        width: 90vw;
+        border-radius: 5px;
+        background-color: rgba(0,0,0, 0.4);
+        @media(min-width:#breaks[tablet]){
+            width: 60vw;
+        }
+        @media(min-width:#breaks[desktop]){
+            width: 50vw;
+        }
+       }
+    }
+    .btn {
+        background-color: @secondary-color;
+        color: @primary-text-color;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+
+
+
