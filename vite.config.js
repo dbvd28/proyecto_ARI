@@ -6,7 +6,7 @@ import handlebars from 'vite-plugin-handlebars';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import { getPageContext } from './data/index.js';
 
-const obtenerEntradas = () => {
+/*const obtenerEntradas = () => {
   const entradas = globSync('./*.html', {
     ignore: ['./dist/**', './node_modules/**']
   });
@@ -20,23 +20,24 @@ const obtenerEntradas = () => {
 
   console.log('✅ Archivos HTML encontrados:', result);
   return result;
-};
+};*/
 
 export default defineConfig({
-  appType: 'mpa',
-  base: process.env.DEPLOY_BASE_URL || '/',
-  build: {
-    rollupOptions: {
-      input: obtenerEntradas()
+    appType: 'mpa',
+    base: process.env.DEPLOY_BASE_URL,
+    build: {
+        rollupOptions: {
+            input: obtenerEntradas()
+        },
+        minify: true
     },
-    minify: true
-  },
-  plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, 'partials'),
-      context: getPageContext
-    }),
-    htmlPurge({}),
-    ViteMinifyPlugin()
-  ]
+    plugins: [
+        handlebars({
+            partialDirectory: resolve(__dirname, 'partials'),
+            context : getPageContext
+        }),
+        htmlPurge({}),
+        ViteMinifyPlugin()
+    ]
 });
+
