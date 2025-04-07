@@ -1,4 +1,4 @@
-const base = process.env.DEPLOY_BASE_URL || '/';
+let base = process.env.DEPLOY_BASE_URL || '/';
 if (!base.endsWith('/')) base += '/';
 
 const commonData = {
