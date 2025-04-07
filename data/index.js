@@ -3,23 +3,23 @@ const base = process.env.DEPLOY_BASE_URL || '/';
 
 const commonData = {
   navigation: [
-    { url: `${base}index.html`, label: 'Inicio' },
-    { url: `${base}faq.html`, label: 'Galería' },
-    { url: `${base}eventos.html`, label: 'Noticias' },
-    { url: `${base}aboutus.html`, label: 'Acerca de FLL' }
+    { url: `/index.html`, label: 'Inicio' },
+    { url: `/faq.html`, label: 'Galería' },
+    { url: `/eventos.html`, label: 'Noticias' },
+    { url: `/aboutus.html`, label: 'Acerca de FLL' }
   ]
 };
 
 export const getPageContext = (pagePath) => {
   let pageData = {};
   switch (pagePath) {
-    case './index.html':
+    case '/index.html':
       break;
-    case './Eventos.html':
+    case '/Eventos.html':
       break;
-    case './faq.html':
+    case '/faq.html':
       break;
-    case './aboutus.html':
+    case '/aboutus.html':
       break;
     default:
       break;
