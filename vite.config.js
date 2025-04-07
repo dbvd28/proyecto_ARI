@@ -6,7 +6,7 @@ import handlebars from 'vite-plugin-handlebars';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import { getPageContext } from './data/index.js';
 
-/*const obtenerEntradas = () => {
+const obtenerEntradas = () => {
   const entradas = globSync('./*.html', {
     ignore: ['./dist/**', './node_modules/**']
   });
@@ -20,7 +20,7 @@ import { getPageContext } from './data/index.js';
 
   console.log('✅ Archivos HTML encontrados:', result);
   return result;
-};*/
+};
 
 export default defineConfig({
     appType: 'mpa',
