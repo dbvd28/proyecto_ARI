@@ -27,10 +27,10 @@ const obtenerEntradas = ()=>{
   );
 }
 
-
+console.log("✅ BASE PATH:", process.env.DEPLOY_BASE_URL);
 export default defineConfig({
   appType: 'mpa',
-  base: process.env.DEPLOY_BASE_URL,
+  base: process.env.DEPLOY_BASE_URL ||'/',
   build: {
       rollupOptions: {
           input: obtenerEntradas()

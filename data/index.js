@@ -4,9 +4,9 @@ const base = process.env.DEPLOY_BASE_URL || '/';
 const commonData = {
   navigation: [
     { url: `${base}index.html`, label: 'Inicio' },
-    { url: `/faq.html`, label: 'Faq' },
-    { url: `/Eventos.html`, label: 'Eventos' },
-    { url: `/aboutus.html`, label: 'Acerca de nosotros' }
+    { url: `${base}faq.html`, label: 'Faq' },
+    { url: `${base}Eventos.html`, label: 'Eventos' },
+    { url: `${base}aboutus.html`, label: 'Acerca de nosotros' }
   ]
 };
 
