@@ -22,6 +22,46 @@ header {
         height: 40px;
       }
     }
+    nav {
+      margin-right: 0rem;
+      width: 100%;
+      @media (min-width: #breaks[tablet]) {
+        margin-right: 1rem;
+        flex: 1;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        @media (min-width: #breaks[tablet]) {
+          flex-direction: row;
+          justify-content: end;
+        }
+        li {
+          border-bottom: 1px solid @primary-color-dark;
+          @media (min-width: #breaks[tablet]) {
+            width: auto;
+            border-bottom: none;
+          }
+          a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: @primary-text-color;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+              background-color: @primary-color-light;
+            }
+            width: 100%;
+            @media (min-width: #breaks[tablet]) {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
     .navbar-start {
       display: flex;
       flex-direction: column;
@@ -110,7 +150,7 @@ header {
       transform: rotate(45deg) translate(-5px, -6px);
       width: 20px;
     }
-    @media (min-width:#breaks[tablet]) {
+    @media (min-width: #breaks[tablet]) {
       .navbar-start {
         display: flex;
         flex-direction: row;
