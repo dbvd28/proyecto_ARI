@@ -1,0 +1,74 @@
+.help {
+    display: flex;
+    flex-direction: column;
+  h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: @primary-text-color;
+    margin-bottom: 0.5rem;
+    span {
+      font-size: 1.8rem;
+      color: #666;
+    }
+  }
+  .help-section {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    width: 100%;
+    @media (min-width: #breaks[tablet]) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: #breaks[desktop]) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .help-card {
+    background: @primary-color-super-light;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    h2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: @primary-text-color;
+      margin-bottom: 0.5rem;
+      span {
+        font-weight: normal;
+        font-size: 1.4rem;
+        color: #666;
+      }
+    }
+
+    .help-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .donation-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      img {
+        max-width: 100%;
+        width: 100%;
+        max-width: 350px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

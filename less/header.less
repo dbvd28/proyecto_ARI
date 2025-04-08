@@ -25,9 +25,27 @@ header {
     nav {
       margin-right: 0rem;
       width: 100%;
+      background-color: @primary-color;
+      position: absolute;
+      align-items: center;
+      top: 60px;
+      left: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+        visibility 0.3s;
+        z-index: 1001;
       @media (min-width: #breaks[tablet]) {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+        z-index: none;
         margin-right: 1rem;
         flex: 1;
+        position: relative;
+        width:200px ;
+        transform: translateY(0);
       }
       ul {
         display: flex;
@@ -62,7 +80,7 @@ header {
         }
       }
     }
-    
+
     .navbar-start {
       display: flex;
       flex-direction: column;
@@ -128,7 +146,7 @@ header {
       margin: 5px 0;
       transition: 0.4s;
     }
-    #menu-toggle:checked ~ .navbar-start {
+    #menu-toggle:checked ~ nav {
       opacity: 1;
       transform: translateY(0);
       visibility: visible;
