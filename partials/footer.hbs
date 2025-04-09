@@ -1,19 +1,11 @@
-  
 <footer>
-     <h2>Siguenos en nuestras redes sociales</h2>
-    <div class="social-icons">
-        <a href="https://www.tiktok.com/@organizacion_ari_hn?" target="_blank">
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCea08yuG74bs6IwPZVUsnxQ" target="_blank">
-         <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://www.instagram.com/organizacion.ari/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/OrganizacionARI" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-    </div>
-    <p>&copy; 2025 Fundacion ARI HN. All rights reserved.</p>
+  <h2>Siguenos en nuestras redes sociales</h2>
+  <div class="social-icons">
+    {{#each iconsSummary}}
+      <a href="{{iconUrl}}" target="_blank" rel="noopener noreferrer">
+        <i class="{{iconImg}}"></i>
+      </a>
+    {{/each}}
+  </div>
+  <p>&copy; 2025 Fundacion ARI HN. All rights reserved.</p>
 </footer>
