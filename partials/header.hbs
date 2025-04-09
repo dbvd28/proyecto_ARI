@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar-left">
       <h1>ARI HN</h1>
-      <img src="../images/Ari_logo.png" alt="Logo de la fundacion" />
+      <img src="Ari_logo.png" alt="Logo de la fundacion" />
     </div>
     <input type="checkbox" id="menu-toggle" />
     <label for="menu-toggle" class="hamburger">
@@ -10,7 +10,14 @@
       <div></div>
       <div></div>
     </label>
-    <div class="navbar-start">
+     <nav>
+        <ul>
+            {{#each navigation}}
+                <li><a href="{{url}}">{{label}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+    <!--<div class="navbar-start">
       <a href="/index.html" class="navbar-item">Inicio</a>
       <div class="dropdown">
         <a href="#" class="navbar-item dropdown-toggle">Nuestros Programas</a>
@@ -30,6 +37,6 @@
           <a href="faq.html" class="dropdown-item">Preguntas frecuentes</a>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </header>

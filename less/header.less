@@ -22,6 +22,65 @@ header {
         height: 40px;
       }
     }
+    nav {
+      margin-right: 0rem;
+      width: 100%;
+      background-color: @primary-color;
+      position: absolute;
+      align-items: center;
+      top: 60px;
+      left: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+        visibility 0.3s;
+        z-index: 1001;
+      @media (min-width: #breaks[tablet]) {
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+        z-index: none;
+        margin-right: 1rem;
+        flex: 1;
+        position: relative;
+        width:200px ;
+        transform: translateY(0);
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        @media (min-width: #breaks[tablet]) {
+          flex-direction: row;
+          justify-content: end;
+        }
+        li {
+          border-bottom: 1px solid @primary-color-dark;
+          @media (min-width: #breaks[tablet]) {
+            width: auto;
+            border-bottom: none;
+          }
+          a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: @primary-text-color;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+              background-color: @primary-color-light;
+            }
+            width: 100%;
+            @media (min-width: #breaks[tablet]) {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
     .navbar-start {
       display: flex;
       flex-direction: column;
@@ -87,7 +146,7 @@ header {
       margin: 5px 0;
       transition: 0.4s;
     }
-    #menu-toggle:checked ~ .navbar-start {
+    #menu-toggle:checked ~ nav {
       opacity: 1;
       transform: translateY(0);
       visibility: visible;
@@ -110,7 +169,7 @@ header {
       transform: rotate(45deg) translate(-5px, -6px);
       width: 20px;
     }
-    @media (min-width:#breaks[tablet]) {
+    @media (min-width: #breaks[tablet]) {
       .navbar-start {
         display: flex;
         flex-direction: row;

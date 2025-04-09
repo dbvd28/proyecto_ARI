@@ -1,31 +1,34 @@
-const base = process.env.DEPLOY_BASE_URL || '/';
-
+let base = process.env.DEPLOY_BASE_URL || "/";
+if (!base.endsWith("/")) base += "/";
 
 const commonData = {
   navigation: [
-    { url: `${base}index.html`, label: 'Inicio' },
-    { url: `${base}faq.html`, label: 'Galería' },
-    { url: `${base}eventos.html`, label: 'Noticias' },
-    { url: `${base}aboutus.html`, label: 'Acerca de FLL' }
-  ]
+    { url: `${base}index.html`, label: "Inicio" },
+    { url: `${base}faq.html`, label: "Faq" },
+    { url: `${base}Eventos.html`, label: "Eventos" },
+    { url: `${base}help.html`, label: "Ayuda" },
+    { url: `${base}contactanos.html`, label: "Contactanos" },
+  ],
 };
 
 export const getPageContext = (pagePath) => {
   let pageData = {};
   switch (pagePath) {
-    case './index.html':
+    case "index.html":
       break;
-    case './Eventos.html':
+    case "Eventos.html":
       break;
-    case './faq.html':
+    case "faq.html":
       break;
-    case './aboutus.html':
+    case "aboutus.html":
+      break;
+    case "contactanos.html":
       break;
     default:
       break;
   }
   return {
     ...commonData,
-    ...pageData
+    ...pageData,
   };
 };
