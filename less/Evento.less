@@ -17,7 +17,11 @@ section {
     background-color: #fff;
     overflow: hidden;
 }
-
+.card:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa y definida */
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
 /* Estilo para el encabezado de la tarjeta */
 .card-header {
     background-color: #f4f4f4;

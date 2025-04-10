@@ -2,17 +2,10 @@
     <h2 class="text-center mb-4 text-black">🐕 Perros rescatados
     </h2>
 <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/rescatado1.jpg" class="d-block w-100 " alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="images/rescatado2.jpg" class="d-block w-100 " alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="images/rescatado3.jpg" class="d-block w-100 " alt="...">
-    </div>
-     <div class="carousel-item">
-      <img src="images/rescatado4.jpg" class="d-block w-100 " alt="...">
-    </div>
+    {{#each photos}}
+      <div class="carousel-item {{#if @first}}active{{/if}}">
+        <img src="{{imgSrc}}" class="{{imgCls}}" alt="{{imgDsc}}">
+      </div>
+    {{/each}}
   </div>
 </div>

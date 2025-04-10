@@ -1,87 +1,17 @@
 <section class="help">
   <h1>Como ayudarnos<span> / How to help us</span></h1>
-  <section class="help-section">
-    <div class="help-card">
-      <div class="donation-images">
-        <img src="images/donacion_ari.jpg" alt="Donación ARI" />
+ <section class="help-section">
+    {{#each cards}}
+      <div class="help-card">
+        <div class="donation-images">
+          <img src="{{imgSrc}}" alt="{{imgDSc}}" />
+        </div>
+        <h2>{{titlesp}} <span>/ {{titleeng}}</span></h2>
+        <p class="donation-description">
+          <strong>{{{dscSpa}}}</strong><br />
+          {{{dcsEng}}}
+        </p>
       </div>
-      <h2>Donar <span>/ Donate</span></h2>
-      <p class="donation-description">
-        <strong>Fondos, concentrado, productos de limpieza, shampoo, correas,
-          desparasitantes, colchones, etc. /</strong><br />
-        Funds, food, cleaning products, shampoo, leashes, medications, pillows
-        and blankets, etc.
-      </p>
-    </div>
-    <div class="help-card">
-      <div class="donation-images">
-        <img src="images/adoptar_ayuda.jpg" alt="Donación ARI" />
-      </div>
-      <h2>Adoptar <span>/ Adopt</span></h2>
-      <p class="donation-description">
-        <strong>Adoptando un animalito nos permites poder rescatar a mas.</strong><br
-        />
-        By adopting you help us reach more animals in need of a shelter.
-      </p>
-    </div>
-
-    <div class="help-card">
-      <div class="donation-images">
-        <img src="images/apadrina_apoya.jpg" alt="Donación ARI" />
-      </div>
-      <h2>Apadrinar <span>/ Sponsor</span></h2>
-      <p class="donation-description">
-        <strong>Apadrinando a un animalito nos permites a nosotros poder ayudar
-          a todos.</strong><br />
-        By sponsoring you help us to attend the needs of every animal in the
-        shelter.
-      </p>
-    </div>
-    <div class="help-card">
-      <div class="donation-images">
-        <img src="images/voluntario_apoya.jpg" alt="Donación ARI" />
-      </div>
-      <h2>Ser voluntario <span>/ Volunteering</span></h2>
-      <p class="donation-description">
-        <strong>Unetenos para asi poder ayudar a mas animalitos a encontrar un
-          hogar.</strong><br />
-        Volunteering gives us the help we need to find a home for more animals.
-      </p>
-    </div>
-
-    <div class="help-card">
-      <div class="donation-images">
-        <img src="images/actividad_apoya.jpg" alt="Donación ARI" />
-      </div>
-      <h2>Apoya nuestras actividades <span>/ Support our activities</span></h2>
-      <p class="donation-description">
-        <strong>Apoya nuestras actividades para asi generar consciencia sobre lo
-          que sufren estos animales.</strong><br />
-        Support our activities to raise awareness about the suffering of these
-        animals.
-      </p>
-    </div>
-    <div class="help-card">
-      <div class="donation-images">
-        <img src="images/tienda_apoya.jpg" alt="Donación ARI" />
-      </div>
-      <h2>Siguenos en nuestras redes sociales
-        <span>/ Follow us on social media</span></h2>
-      <p class="donation-description">
-        <strong>Siguenos en nuestras redes.Ingresa a nuestra tienda online
-          <a
-            href="https://www.instagram.com/arishop.hn/"
-            target="_blank"
-          >(arishop.hn)</a>
-          donde el 100% de nuestras ganancias se utilizan para poder ayudar en
-          el refugio.</strong><br />
-        Follow us on social media. Enter our online store
-        <a
-          href="https://www.instagram.com/arishop.hn/"
-          target="_blank"
-        >(arishop.hn)</a>
-        where 100% of our profits are used to help in the shelter.
-      </p>
-    </div>
+    {{/each}}
   </section>
 </section>
