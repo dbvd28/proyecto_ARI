@@ -1,0 +1,80 @@
+/* Hero Panel */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('/images/about-hero-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+  
+    .hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+      
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  
+  /* Contenido Principal */
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+  
+    .about-content, .mission-section {
+      margin-bottom: 50px;
+      
+      p {
+        margin-bottom: 25px;
+        text-align: justify;
+      }
+    }
+  
+    .mission-section {
+      background-color: #f9f9f9;
+      padding: 40px;
+      border-radius: 8px;
+      border-left: 5px solid #fbbf24;
+      
+      h2 {
+        color: #222;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        font-weight: 700;
+      }
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-hero {
+      height: 50vh;
+      
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .about-container {
+      font-size: 1rem;
+      
+      .mission-section {
+        padding: 25px;
+        
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
