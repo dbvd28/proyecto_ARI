@@ -1,5 +1,7 @@
 let base = process.env.DEPLOY_BASE_URL || "/";
 if (!base.endsWith("/")) base += "/";
+import { helpcards } from "./pages/helpPage.js";
+import { carrouselItems } from "./pages/indexpage.js";
 const commonData = {
   navigation: [
     { url: `${base}index.html`, label: "Inicio" },
@@ -29,26 +31,25 @@ const commonData = {
 };
 
 export const getPageContext = (pagePath) => {
+  console.log("Requested pagePath:", pagePath);
   let pageData = {};
-  switch (pagePath) {
+  switch (pagePath.replace(/^\//, "")) {
     case "index.html":
-      pageData = {iconsSummary: socialIcons.iconsSummary}
+      pageData = { photos: carrouselItems.photos}
       break;
     case "Eventos.html":
       break;
     case "faq.html":
       break;
-    case "aboutus.html":
+    case "help.html":
+      pageData={cards: helpcards.cards}
       break;
     case "contactanos.html":
       break;
     default:
       break;
   }
-  console.log('Context Data:', {
-    ...commonData,
-    ...pageData,
-  });
+
   return {
     ...commonData,
     ...pageData,
