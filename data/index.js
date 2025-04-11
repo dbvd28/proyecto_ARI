@@ -36,7 +36,6 @@ const commonData = {
 };
 
 export const getPageContext = (pagePath) => {
-  console.log("Requested pagePath:", pagePath);
   let pageData = {};
   switch (pagePath.replace(/^\//, "")) {
     case "index.html":
@@ -54,7 +53,6 @@ export const getPageContext = (pagePath) => {
     default:
       break;
   }
-  console.log(commonData.navigation);
   return {
     ...commonData,
     ...pageData,
