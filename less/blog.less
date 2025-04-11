@@ -1,18 +1,23 @@
 @footer-bg-color: #f5f5f5;
 @content-padding: 20px;
 @main-min-height: calc(100vh - 120px);
-@border-color: #f5a623; 
+@border-color: #f5a623;
 
 .blog-main {
   flex: 1 0 auto;
   padding: @content-padding;
   min-height: @main-min-height;
 
-  /* Encabezado del blog */
   .blog-header {
+    display: block;
     text-align: center;
     padding: 30px 20px;
     background-color: #fff;
+
+    h1, p {
+      display: block;
+      width: 100%;
+    }
 
     h1 {
       font-size: 3rem;
@@ -36,7 +41,7 @@
     }
   }
 
-  /* Contenedor de publicaciones */
+  /* Tarjetitas */
   .blog-container {
     padding: @content-padding;
     background-color: white;
@@ -57,7 +62,7 @@
     align-items: center;
     justify-content: flex-start;
     border: 1px solid @border-color;
-    background-color: #fff; 
+    background-color: #fff;
     transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 
     &:hover {
@@ -77,7 +82,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 8px;
-        background-color: #fff; 
+        background-color: #fff;
       }
     }
 
@@ -105,7 +110,7 @@
     }
   }
 
-  /* Media queries */
+  /* Responsive */
   @media (max-width: 768px) {
     .blog-post {
       flex-direction: column;
