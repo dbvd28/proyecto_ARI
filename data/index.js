@@ -7,7 +7,12 @@ const commonData = {
     { url: `${base}index.html`, label: "Inicio" },
     { url: `${base}faq.html`, label: "Faq" },
     { url: `${base}Eventos.html`, label: "Eventos" },
-    { url: `${base}help.html`, label: "Ayuda" },
+    { label: 'Ayudar',
+      children:[
+       { url: `${base}help.html`, label: "Como ayudarnos" },
+       {url: `${base}donaciones.html`, label: "Donaciones"}
+      ]
+    },
     { url: `${base}contactanos.html`, label: "Contactanos" },
   ],
   iconsSummary: [
@@ -49,7 +54,7 @@ export const getPageContext = (pagePath) => {
     default:
       break;
   }
-
+  console.log(commonData.navigation);
   return {
     ...commonData,
     ...pageData,
