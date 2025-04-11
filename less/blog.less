@@ -1,0 +1,131 @@
+@footer-bg-color: #f5f5f5;
+@content-padding: 20px;
+@main-min-height: calc(100vh - 120px);
+@border-color: #f5a623; 
+
+.blog-main {
+  flex: 1 0 auto;
+  padding: @content-padding;
+  min-height: @main-min-height;
+
+  /* Encabezado del blog */
+  .blog-header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid @border-color;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.6;
+      margin-top: 0;
+      font-style: italic;
+    }
+  }
+
+  /* Contenedor de publicaciones */
+  .blog-container {
+    padding: @content-padding;
+    background-color: white;
+    display: block;
+    gap: @content-padding;
+    margin-bottom: @content-padding;
+  }
+
+  .blog-post {
+    border-radius: 8px;
+    padding: @content-padding;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 1cm @content-padding 1cm;
+    width: calc(100% - 2cm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid @border-color;
+    background-color: #fff; 
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transform: translateY(-4px);
+      border-color: darken(@border-color, 10%);
+    }
+
+    .post-image {
+      width: 250px;
+      height: 250px;
+      flex-shrink: 0;
+      background-color: #fff;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        background-color: #fff; 
+      }
+    }
+
+    .post-content {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+
+      h2 {
+        font-size: 1.8rem;
+        color: #000;
+        margin-bottom: 10px;
+        text-align: left;
+        background-color: #fff;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 0;
+        background-color: #fff;
+      }
+    }
+  }
+
+  /* Media queries */
+  @media (max-width: 768px) {
+    .blog-post {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .post-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .post-content {
+        padding-left: 0;
+      }
+    }
+  }
+
+  html, body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+}
