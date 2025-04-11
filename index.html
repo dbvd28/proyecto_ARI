@@ -12,41 +12,16 @@
     ></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
-    <script src="/data/galeria.js"></script>
+    <script src="data/pages/galeria.js"></script>
   </head>
   <body>
     {{> header}}
-    
-
     <main>
       {{> hero}}
       <section>
         {{> galeria}}
       </section>
-      <section class="mission">
-        <h2 class="title-mission">Misión/Mission</h2>
-        <div class="p-mission">
-          <p class="span-mission">
-            Somos una <strong>organización sin fines de lucro</strong> en
-            <strong>Tegucigalpa, Honduras</strong>, dedicada al
-            <span class="highlight">rescate, rehabilitación y adopción</span> de
-            animales víctimas de maltrato y abandono. Aunque no contamos con un
-            refugio, somos una <strong>red de casas cunas</strong> unidas por la
-            pasión de mejorar las vidas de los animales en situación de calle.
-            🐾💙
-          </p>
-          <p class="eng-mission">
-            We are a <strong>non-profit organization</strong> in
-            <strong>Tegucigalpa, Honduras</strong>, dedicated to the
-            <span class="highlight">rescue, rehabilitation, and adoption</span>
-            of animals that have suffered abuse and abandonment. While we do not
-            have a shelter, we are a
-            <strong>network of foster homes</strong> across the city, always
-            full of love and working together to create a better future for
-            these animals. 🐶🐱
-          </p>
-        </div>
-      </section>
+      {{> about}}
       {{> carrusel}}
     </main>
     {{> footer}}
