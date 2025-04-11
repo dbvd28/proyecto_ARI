@@ -5,7 +5,7 @@ import { carrouselItems } from "./pages/indexpage.js";
 const commonData = {
   navigation: [
     { url: `${base}index.html`, label: "Inicio" },
-    { url: `${base}faq.html`, label: "Faq" },
+    { url: `${base}faq.html`, label: "FAQ" },
     { url: `${base}Eventos.html`, label: "Eventos" },
     { label: 'Ayudar',
       children:[
