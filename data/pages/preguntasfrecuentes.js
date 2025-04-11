@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
       header.addEventListener('click', () => {
         const estaActiva = pregunta.classList.contains('activa');
   
-        // Cierra todas
         document.querySelectorAll('.pregunta').forEach(p => {
           p.classList.remove('activa');
           p.querySelector('.respuesta').style.display = 'none';
           p.querySelector('.icono i').classList.replace('fa-minus', 'fa-plus');
         });
   
-        // Abre si no estaba activa
         if (!estaActiva) {
           pregunta.classList.add('activa');
           respuesta.style.display = 'block';
