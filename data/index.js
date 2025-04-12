@@ -5,12 +5,19 @@ import { carrouselItems } from "./pages/indexpage.js";
 const commonData = {
   navigation: [
     { url: `${base}index.html`, label: "Inicio" },
-    { url: `${base}faq.html`, label: "FAQ" },
+    { label:'Conocenos',
+      children:[
+        {url: `${base}faq.html`, label: "FAQ"} ,
+        {url: `${base}blog.html`, label: "Blog"},
+        {url: `${base}ubicacion.html`, label: "Ubicacion"}
+      ]
+  },
     { url: `${base}Eventos.html`, label: "Eventos" },
     { label: 'Ayudar',
       children:[
        { url: `${base}help.html`, label: "Como ayudarnos" },
-       {url: `${base}donaciones.html`, label: "Donaciones"}
+       {url: `${base}donaciones.html`, label: "Donaciones"},
+      
       ]
     },
     { url: `${base}contactanos.html`, label: "Contactanos" },

@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="less/main.less">
     <title>Ubicación</title>
     <script src="https://kit.fontawesome.com/79b357c1fe.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+          toggle.addEventListener("click", () => {
+            const dropdownMenu = toggle.nextElementSibling;
+            dropdownMenu.classList.toggle("active");
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     {{> header}}
